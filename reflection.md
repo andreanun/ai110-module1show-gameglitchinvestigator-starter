@@ -13,6 +13,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  Claude Code
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
@@ -41,3 +42,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+<!-- Here's a summary of all the bugs we fixed in app.py:
+
+  1. New Game did nothing — status wasn't reset to "playing", so st.stop() blocked the game
+  2. Input not cleared on New Game — added game_id to the input's key so Streamlit renders a fresh widget
+  3. Hints were backwards — "Too High" said "Go HIGHER!" and "Too Low" said "Go LOWER!"
+  4. Hard difficulty easier than Normal — range was 1–50 instead of 1–200; info text also hardcoded "1 to 100" regardless of difficulty
+  5. Wins blocked on even attempts — secret was cast to a string on even attempts, so integer guesses could never match
+  6. Score rewarded wrong guesses — "Too High" on even attempts added 5 points instead of deducting
+  7. Attempts off by one — initialized to 1 instead of 0, so the first guess counted as attempt 2 -->
