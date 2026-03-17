@@ -28,7 +28,7 @@ pip-wheel-metadata/
 htmlcov/
 nosetests.xml
 coverage.xml
-
+conftest.py
 # Logs
 *.log
 
