@@ -5,8 +5,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
+- List at least two concrete bugs you noticed at the start
   (for example: "the secret number kept changing" or "the hints were backwards").
+
+When we first ran the game, it looked playable on the surface but quickly showed problems once we started guessing. The "New Game" button did nothing — clicking it didn't actually reset the game because the status was never set back to "playing", so `st.stop()` kept blocking the rest of the app. The hints were also backwards: when our guess was too high, the game told us to go higher, and when we were too low it said go lower, which made it impossible to win by following the hints.
 
 ---
 
